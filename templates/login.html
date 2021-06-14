@@ -23,6 +23,13 @@
           <div class="col-md-4">
                  <div class="card mt-150">
                    <div class="card-body">
+                    {% if get_flashed_messages() %}
+                    {% for success in get_flashed_messages() %}
+                    <div class="alert alert-success">
+                      <center>{{success}}</center>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
                        <form class="form" method="post" action="/login_validation">
                            <label>Username</label><br>
                            <input type="email" class="form-control"name="email"><br>

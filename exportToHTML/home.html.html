@@ -1,0 +1,398 @@
+<html>
+<head>
+<title>home.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+home.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+
+    <span class="s0">&lt;title&gt;</span><span class="s1">Page Title</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;script&gt;</span>
+
+        <span class="s1">function myFunction() {</span>
+  <span class="s1">document.getElementById(&quot;myDropdown&quot;).classList.toggle(&quot;show&quot;);</span>
+<span class="s1">}</span>
+
+<span class="s1">function filterFunction() {</span>
+  <span class="s1">var input, filter, ul, li, a, i;</span>
+  <span class="s1">input = document.getElementById(&quot;myInput&quot;);</span>
+  <span class="s1">filter = input.value.toUpperCase();</span>
+  <span class="s1">div = document.getElementById(&quot;myDropdown&quot;);</span>
+  <span class="s1">a = div.getElementsByTagName(&quot;a&quot;);</span>
+  <span class="s1">for (i = 0; i &lt; a.length; i++) {</span>
+    <span class="s1">txtValue = a[i].textContent || a[i].innerText;</span>
+    <span class="s1">if (txtValue.toUpperCase().indexOf(filter) &gt; -1) {</span>
+      <span class="s1">a[i].style.display = &quot;&quot;;</span>
+    <span class="s1">} else {</span>
+      <span class="s1">a[i].style.display = &quot;none&quot;;</span>
+    <span class="s1">}</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+    <span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;style&gt;</span>
+<span class="s1">* {</span>
+  <span class="s1">box-sizing: border-box;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Style the body */</span>
+<span class="s1">body {</span>
+  <span class="s1">font-family: Arial, Helvetica, sans-serif;</span>
+  <span class="s1">margin: 0;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Header/logo Title */</span>
+<span class="s1">.header {</span>
+  <span class="s1">padding: 3px;</span>
+  <span class="s1">text-align: center;</span>
+  <span class="s1">background: #6B1F5E;</span>
+  <span class="s1">color: white;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Increase the font size of the heading */</span>
+<span class="s1">.header h1 {</span>
+  <span class="s1">font-size: 10px;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it &quot;sticks&quot; in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */</span>
+<span class="s1">.navbar {</span>
+  <span class="s1">overflow: hidden;</span>
+  <span class="s1">background-color: #690462;</span>
+  <span class="s1">position: sticky;</span>
+  <span class="s1">position: -webkit-sticky;</span>
+  <span class="s1">top: 0;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Style the navigation bar links */</span>
+<span class="s1">.navbar a {</span>
+  <span class="s1">float: left;</span>
+  <span class="s1">display: block;</span>
+  <span class="s1">color: white;</span>
+  <span class="s1">text-align: center;</span>
+  <span class="s1">padding: 14px 20px;</span>
+  <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">/* Right-aligned link */</span>
+<span class="s1">.navbar a.right {</span>
+  <span class="s1">float: right;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Change color on hover */</span>
+<span class="s1">.navbar a:hover {</span>
+  <span class="s1">background-color: #ddd;</span>
+  <span class="s1">color: black;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Active/current link */</span>
+<span class="s1">.navbar a.active {</span>
+  <span class="s1">background-color: #666;</span>
+  <span class="s1">color: white;</span>
+<span class="s1">}</span>
+
+<span class="s1">.navbar a.logo{</span>
+  <span class="s1">float: none;</span>
+  <span class="s1">position: absolute;</span>
+  <span class="s1">top: 50%;</span>
+  <span class="s1">left: 50%;</span>
+  <span class="s1">transform: translate(-50%, -50%);</span>
+<span class="s1">}</span>
+
+
+<span class="s1">/* Column container */</span>
+<span class="s1">.row {</span>
+  <span class="s1">display: -ms-flexbox; /* IE10 */</span>
+  <span class="s1">display: flex;</span>
+  <span class="s1">-ms-flex-wrap: wrap; /* IE10 */</span>
+  <span class="s1">flex-wrap: wrap;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Create two unequal columns that sits next to each other */</span>
+<span class="s1">/* Sidebar/left column */</span>
+<span class="s1">.side {</span>
+  <span class="s1">-ms-flex: 30%; /* IE10 */</span>
+  <span class="s1">flex: 30%;</span>
+  <span class="s1">background-color: #f1f1f1;</span>
+  <span class="s1">padding: 20px;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Main column */</span>
+<span class="s1">.main {</span>
+  <span class="s1">-ms-flex: 70%; /* IE10 */</span>
+  <span class="s1">flex: 70%;</span>
+  <span class="s1">background-color: white;</span>
+  <span class="s1">padding: 20px;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Fake image, just for this example */</span>
+<span class="s1">.fakeimg {</span>
+  <span class="s1">background-color: #aaa;</span>
+  <span class="s1">width: 100%;</span>
+  <span class="s1">padding: 20px;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Footer */</span>
+<span class="s1">.footer {</span>
+  <span class="s1">padding: 20px;</span>
+  <span class="s1">text-align: center;</span>
+  <span class="s1">background: #ddd;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */</span>
+<span class="s1">@media screen and (max-width: 700px) {</span>
+  <span class="s1">.row {</span>
+    <span class="s1">flex-direction: column;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */</span>
+<span class="s1">@media screen and (max-width: 400px) {</span>
+  <span class="s1">.navbar a {</span>
+    <span class="s1">float: none;</span>
+    <span class="s1">width: 100%;</span>
+  <span class="s1">}</span>
+
+<span class="s1">}</span>
+<span class="s1">/* Dropdown Button */</span>
+<span class="s1">.dropbtn {</span>
+  <span class="s1">background-color: #333;</span>
+  <span class="s1">color: white;</span>
+  <span class="s1">padding: 14px 24px;</span>
+  <span class="s1">font-size: 16px;</span>
+  <span class="s1">border: none;</span>
+  <span class="s1">cursor: pointer;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">/* Dropdown button on hover &amp; focus */</span>
+<span class="s1">.dropbtn:hover {</span>
+  <span class="s1">background-color: #666;;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* The search field */</span>
+<span class="s1">#myInput {</span>
+  <span class="s1">box-sizing: border-box;</span>
+  <span class="s1">background-image: url('searchicon.png');</span>
+  <span class="s1">background-position: 14px 12px;</span>
+  <span class="s1">background-repeat: no-repeat;</span>
+  <span class="s1">font-size: 16px;</span>
+  <span class="s1">padding: 14px 20px 12px 45px;</span>
+  <span class="s1">border: none;</span>
+  <span class="s1">border-bottom: 1px solid #ddd;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* The search field when it gets focus/clicked on */</span>
+<span class="s1">#myInput:focus {outline: 3px solid #ddd;}</span>
+
+<span class="s1">/* The container &lt;div&gt; - needed to position the dropdown content */</span>
+<span class="s1">.dropdown {</span>
+  <span class="s1">position: relative;</span>
+  <span class="s1">display: inline-block;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Dropdown Content (Hidden by Default) */</span>
+<span class="s1">.dropdown-content {</span>
+  <span class="s1">display: none;</span>
+  <span class="s1">position: absolute;</span>
+  <span class="s1">background-color: #f6f6f6;</span>
+  <span class="s1">min-width: 230px;</span>
+  <span class="s1">border: 1px solid #ddd;</span>
+  <span class="s1">z-index: 1;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Links inside the dropdown */</span>
+<span class="s1">.dropdown-content a {</span>
+  <span class="s1">color: black;</span>
+  <span class="s1">padding: 12px 16px;</span>
+  <span class="s1">text-decoration: none;</span>
+  <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Change color of dropdown links on hover */</span>
+<span class="s1">.dropdown-content a:hover {background-color: #f1f1f1}</span>
+
+<span class="s1">/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */</span>
+<span class="s1">.show {display:block;}</span>
+<span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;navbar&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;</span><span class="s1">Home</span><span class="s0">&lt;/a&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;/table&quot;</span><span class="s0">&gt;</span><span class="s1">Employees</span><span class="s0">&lt;/a&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;</span><span class="s1">Roles</span><span class="s0">&lt;/a&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot; </span><span class="s2">class</span><span class="s3">=&quot;logo&quot;</span><span class="s0">&gt;&lt;img </span><span class="s2">src</span><span class="s3">=&quot;https://cdn-images-1.medium.com/max/1200/1*zRtzbfQx59Dg1lXxqXCB7w.png&quot; </span><span class="s2">width</span><span class="s3">=&quot;100&quot; </span><span class="s2">height</span><span class="s3">=&quot;110&quot;</span><span class="s0">&gt;&lt;/a&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;/logout&quot;</span><span class="s0">&gt;</span><span class="s1">Logout</span><span class="s0">&lt;/a&gt;</span>
+   <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot; </span><span class="s2">class</span><span class="s3">=&quot;right&quot;</span><span class="s0">&gt;</span><span class="s1">Client</span><span class="s0">&lt;/a&gt;</span>
+  <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot; </span><span class="s2">class</span><span class="s3">=&quot;right&quot;</span><span class="s0">&gt;</span><span class="s1">Revenue</span><span class="s0">&lt;/a&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;dropdown&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;myFunction()&quot; </span><span class="s2">class</span><span class="s3">=&quot;dropbtn&quot;</span><span class="s0">&gt;</span><span class="s1">COE</span><span class="s0">&lt;/button&gt;</span>
+  <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;myDropdown&quot; </span><span class="s2">class</span><span class="s3">=&quot;dropdown-content&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;Search..&quot; </span><span class="s2">id</span><span class="s3">=&quot;myInput&quot; </span><span class="s2">onkeyup</span><span class="s3">=&quot;filterFunction()&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#about&quot;</span><span class="s0">&gt;</span><span class="s1">Agile</span><span class="s0">&lt;/a&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#base&quot;</span><span class="s0">&gt;</span><span class="s1">Java</span><span class="s0">&lt;/a&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#blog&quot;</span><span class="s0">&gt;</span><span class="s1">UE/UI</span><span class="s0">&lt;/a&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#contact&quot;</span><span class="s0">&gt;</span><span class="s1">Big data</span><span class="s0">&lt;/a&gt;</span>
+  <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;/div&gt;</span>
+
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+
+<span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+<span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;style&gt;</span>
+<span class="s1">* {</span>
+  <span class="s1">box-sizing: border-box;</span>
+<span class="s1">}</span>
+
+<span class="s1">body {</span>
+  <span class="s1">font-family: Arial, Helvetica, sans-serif;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Float four columns side by side */</span>
+<span class="s1">.column {</span>
+  <span class="s1">float: left;</span>
+  <span class="s1">width: 25%;</span>
+  <span class="s1">padding: 0 10px;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Remove extra left and right margins, due to padding */</span>
+<span class="s1">.row {margin: 0 -5px;}</span>
+
+<span class="s1">/* Clear floats after the columns */</span>
+<span class="s1">.row:after {</span>
+  <span class="s1">content: &quot;&quot;;</span>
+  <span class="s1">display: table;</span>
+  <span class="s1">clear: both;</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Responsive columns */</span>
+<span class="s1">@media screen and (max-width: 600px) {</span>
+  <span class="s1">.column {</span>
+    <span class="s1">width: 100%;</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">margin-bottom: 20px;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s1">/* Style the counter cards */</span>
+<span class="s1">.card {</span>
+  <span class="s1">box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);</span>
+  <span class="s1">padding: 16px;</span>
+  <span class="s1">text-align: center;</span>
+  <span class="s1">background-color: #f1f1f1;</span>
+<span class="s1">}</span>
+<span class="s0">&lt;/style&gt;</span>
+
+<span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">href</span><span class="s3">=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+<span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;style&gt;</span>
+   <span class="s1">.content-table {</span>
+  <span class="s1">margin-left: auto;</span>
+  <span class="s1">margin-right: auto;</span>
+  <span class="s1">border-collapse: collapse;</span>
+  <span class="s1">margin: 25px 0;</span>
+  <span class="s1">font-size: 0.9em;</span>
+  <span class="s1">min-width: 400px;</span>
+  <span class="s1">border-radius: 5px 5px 0 0;</span>
+  <span class="s1">overflow: hidden;</span>
+  <span class="s1">box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table thead tr {</span>
+  <span class="s1">background-color: #2b2525;</span>
+  <span class="s1">color: #ffffff;</span>
+  <span class="s1">text-align: left;</span>
+  <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table th,</span>
+<span class="s1">.content-table td {</span>
+  <span class="s1">padding: 12px 15px;</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table tbody tr {</span>
+  <span class="s1">border-bottom: 1px solid #dddddd;</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table tbody tr:nth-of-type(even) {</span>
+  <span class="s1">background-color: #f3f3f3;</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table tbody tr:last-of-type {</span>
+  <span class="s1">border-bottom: 2px solid #98007c;</span>
+<span class="s1">}</span>
+
+<span class="s1">.content-table tbody tr.active-row {</span>
+  <span class="s1">font-weight: bold;</span>
+  <span class="s1">color: #98007c;</span>
+<span class="s1">}</span>
+
+<span class="s0">&lt;/style&gt;</span>
+
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;container&quot;</span><span class="s0">&gt;</span>
+   <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;row&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;col-md-12&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;panel-body&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;table-responsive&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;table </span><span class="s2">class</span><span class="s3">=&quot;content-table table-bordered&quot; </span><span class="s2">align</span><span class="s3">=&quot;centre&quot;</span><span class="s0">&gt;</span>
+                    <span class="s0">&lt;thead&gt;</span>
+                        <span class="s0">&lt;tr&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">Name</span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">On ATP Since</span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">Major Skills</span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">Additional Skills</span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">COE</span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">Travel Ready? </span><span class="s0">&lt;/th&gt;</span>
+                            <span class="s0">&lt;th &gt;</span><span class="s1">Current Location </span><span class="s0">&lt;/th&gt;</span>
+                        <span class="s0">&lt;/tr&gt;</span>
+                        <span class="s0">&lt;/thead&gt;</span>
+                    <span class="s1">{% for row in employee %}</span>
+                            <span class="s0">&lt;tr&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.name}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.onatpsince}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.majorskills}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.additionalskills}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.coe}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.travelready}}</span><span class="s0">&lt;/td&gt;</span>
+                                <span class="s0">&lt;td&gt;</span><span class="s1">{{row.currentlocation}}</span><span class="s0">&lt;/td&gt;</span>
+                            <span class="s0">&lt;/tr&gt;</span>
+                    <span class="s1">{% endfor %}</span>
+                <span class="s0">&lt;/table&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+   <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+
+
+</pre>
+</body>
+</html>

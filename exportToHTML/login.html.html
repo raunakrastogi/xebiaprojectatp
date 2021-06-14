@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>login.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bababa;}
+.s3 { color: #a5c261;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+login.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!doctype </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;head&gt;</span>
+    <span class="s4">&lt;!-- Required meta tags --&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;utf-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1&quot;</span><span class="s0">&gt;</span>
+
+
+      <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">type</span><span class="s3">=&quot;text/css&quot; </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('static',filename='css/style.css') }}&quot;</span><span class="s0">&gt;</span>
+    <span class="s4">&lt;!-- Bootstrap CSS --&gt;</span>
+    <span class="s0">&lt;link </span><span class="s2">href</span><span class="s3">=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">integrity</span><span class="s3">=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; </span><span class="s2">crossorigin</span><span class="s3">=&quot;anonymous&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;title&gt;</span><span class="s1">Xebia Portal</span><span class="s0">&lt;/title&gt;</span>
+  <span class="s0">&lt;/head&gt;</span>
+  <span class="s0">&lt;body </span><span class="s2">class</span><span class="s3">=&quot;bg-nav&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=https://jfall.nl/wp-content/uploads/2019/09/Xebia_Logo_Purple_RGB.jpg&quot; </span><span class="s2">class</span><span class="s3">=&quot;mx-auto d-block&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;container&quot;</span><span class="s0">&gt;</span>
+          <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;row&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;col-md-8&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;text-light display-4 mt-150&quot; </span><span class="s2">style</span><span class="s3">=&quot;font-size:80px&quot;</span><span class="s0">&gt;</span><span class="s1">Xebia's own ATP Management Portal</span><span class="s0">&lt;/h1&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+          <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;col-md-4&quot;</span><span class="s0">&gt;</span>
+                 <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card mt-150&quot;</span><span class="s0">&gt;</span>
+                   <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-body&quot;</span><span class="s0">&gt;</span>
+                       <span class="s0">&lt;form </span><span class="s2">class</span><span class="s3">=&quot;form&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot; </span><span class="s2">action</span><span class="s3">=&quot;/login_validation&quot;</span><span class="s0">&gt;</span>
+                           <span class="s0">&lt;label&gt;</span><span class="s1">Username</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+                           <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;email&quot; </span><span class="s2">class</span><span class="s3">=&quot;form-control&quot;</span><span class="s2">name</span><span class="s3">=&quot;email&quot;</span><span class="s0">&gt;&lt;br&gt;</span>
+                           <span class="s0">&lt;label&gt;</span><span class="s1">Password</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+                           <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;password&quot; </span><span class="s2">class</span><span class="s3">=&quot;form-control&quot;</span><span class="s2">name</span><span class="s3">=&quot;password&quot;</span><span class="s0">&gt;&lt;br&gt;</span>
+                           <span class="s0">&lt;p </span><span class="s2">style</span><span class="s3">=&quot;color:red;&quot;</span><span class="s0">&gt;</span><span class="s1">{{info}}</span><span class="s0">&lt;/p&gt;</span>
+                           <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">class</span><span class="s3">=&quot;btn btn-primary btn-floating&quot; </span><span class="s2">value</span><span class="s3">=&quot;Login&quot;</span><span class="s0">&gt;</span>
+                           <span class="s0">&lt;a </span><span class="s2">class</span><span class="s3">=&quot;btn btn-primary btn-floating&quot; </span><span class="s2">href</span><span class="s3">=&quot;https://www.google.com/&quot; </span><span class="s2">role</span><span class="s3">=&quot;button&quot;</span><span class="s0">&gt;</span><span class="s1">Cancel</span><span class="s0">&lt;/a&gt;&lt;br&gt;&lt;br&gt;</span>
+                           <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;/forget&quot;</span><span class="s0">&gt;</span><span class="s1">Forget Password ?</span><span class="s0">&lt;/a&gt;</span>
+                       <span class="s0">&lt;/form&gt;</span>
+                   <span class="s0">&lt;/div&gt;</span>
+              <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+
+    <span class="s4">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
+
+    <span class="s4">&lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;</span>
+    <span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js&quot; </span><span class="s2">integrity</span><span class="s3">=&quot;sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4&quot; </span><span class="s2">crossorigin</span><span class="s3">=&quot;anonymous&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+
+    <span class="s4">&lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;</span>
+    <span class="s4">&lt;!--</span>
+    <span class="s4">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js&quot; integrity=&quot;sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; 
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js&quot; integrity=&quot;sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; 
+    --&gt;</span>
+  <span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
