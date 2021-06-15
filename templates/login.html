@@ -8,43 +8,56 @@
 
       <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     <title>Xebia Portal</title>
   </head>
-  <body class="bg-nav">
+    <div class="back">
+    <div class="img">
+        <img src="https://images.opencollective.com/xebia/0bd8e4d/logo/256.png">
+    </div>
+    <div class="headline">
+        <p >ATP Management Portal</p>
+    </div>
 
-    <img src="file:///C:/Users/rasto/Desktop/XEBIA%20ATP/logo.png" class="mx-auto d-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-                <h1 class="text-light display-4 mt-150" style="font-size:80px">Xebia's own ATP Management Portal</h1>
-            </div>
-          <div class="col-md-4">
-                 <div class="card mt-150">
-                   <div class="card-body">
+    <div class = "container">
+  <div class="wrapper">
                     {% if get_flashed_messages() %}
                     {% for success in get_flashed_messages() %}
-                    <div class="alert alert-success">
-                      <center>{{success}}</center>
+                    <div class="alert">
+                      <center>Invalid Username/Password!</center>
                     </div>
                     {% endfor %}
                     {% endif %}
-                       <form class="form" method="post" action="/login_validation">
-                           <label>Username</label><br>
-                           <input type="email" class="form-control"name="email"><br>
-                           <label>Password</label><br>
-                           <input type="password" class="form-control"name="password"><br><br>
-                           <p style="color:red;">{{info}}</p>
-                           <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-                           <a class="btn btn-secondary btn-block btn-lg" href="https://www.google.com/" role="button">Cancel</a>
-                           <a href="/forget">Forget Password ?</a>
-                       </form>
-                   </div>
-              </div>
+
+    <header>Login</header>
+    <img src="static/css/img.svg">
+    <form class="form" method="post" action="/login_validation">
+      <div class="field email">
+        <div class="input-area">
+          <input type="email" class="form-control" placeholder="Email Address" name="email">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
         </div>
-
-
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" class="form-control" placeholder="Password" name="password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <div class="pass-txt"><a href="/forget">Forgot password?</a></div>
+      <p style="color:red;">{{info}}</p>
+      <input type="submit" value="Login">
+      <a class="pass-link" href="https://www.google.com/" role="button" >Cancel</a><br>
+    </form>
+  </div>
+</div>
+</div>
+<!--  <script src="main.py"></script>-->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

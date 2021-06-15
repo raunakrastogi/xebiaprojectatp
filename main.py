@@ -60,7 +60,7 @@ def security(user):
             session['user_pass_change'] = user
             return redirect(url_for('changepass'))
         else:
-            flash("Incorrect answer.")
+            flash("Incorrect Answer.")
             return redirect(url_for('security', user = users['Name']))
 
     return render_template('security_question.html', user=user)
@@ -78,7 +78,7 @@ def changepass():
 
         session.pop('user_pass_change')
 
-        flash("Password changed!")
+        flash('Password changed successfully :)', 'success')
         return redirect(url_for('login'))
 
     return render_template('change_password.html')
@@ -109,7 +109,9 @@ def login_validation():
         session['user_id'] = users['Name']
         return redirect('/home')
     else:
+        flash('Invalid Username/Password!','danger')
         return redirect('/')
+
 
 
 @app.route('/logout')
