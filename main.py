@@ -60,7 +60,7 @@ def security(user):
             session['user_pass_change'] = user
             return redirect(url_for('changepass'))
         else:
-            flash("Incorrect Answer.")
+            flash("Date of Birth doesn't match!")
             return redirect(url_for('security', user = users['Name']))
 
     return render_template('security_question.html', user=user)
